@@ -80,5 +80,20 @@
 <body>
     <h1 class="main-title">ZJO1024</h1>
     <p class="subtitle">ZJO1024's GitHub Page.</p>
+
+    <script>
+        (function() {
+            const queryString = window.location.search;
+            const params = new URLSearchParams(queryString);
+
+            if (params.get('sh') === '1') {
+                const subtitle = document.querySelector('.subtitle');
+                if (subtitle) {
+                    subtitle.style.visibility = 'hidden';
+                    subtitle.style.pointerEvents = 'none';
+                }
+            }
+        })();
+    </script>
 </body>
 </html>
